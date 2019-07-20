@@ -1,6 +1,6 @@
 # Introduction:
 
-It is a front-end portfolio project based on  a [Udemy](https://www.udemy.com/complete-react-developer-zero-to-mastery/)  course. It is deployed on Heroku at the following address,
+It is a front-end portfolio project based on  [Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)](https://www.udemy.com/complete-react-developer-zero-to-mastery/)  Udemy course. It is deployed on Heroku at the following address,
 
 https://www.portfolio-ecommerce-website.herokuapp.com
 
