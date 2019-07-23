@@ -1,7 +1,7 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from 'react';
+import { connect } from 'react-redux';
 
-import { addItem } from "../../redux/cart/cart.actions";
+import { addItem } from '../../redux/cart/cart.actions';
 
 import {
   CollectionItemContainer,
@@ -10,14 +10,14 @@ import {
   BackgroundImage,
   NameContainer,
   PriceContainer
-} from "./collection-styles.styles";
+} from './collection-item.styles';
 
 const CollectionItem = ({ item, addItem }) => {
   const { name, price, imageUrl } = item;
 
   return (
     <CollectionItemContainer>
-      <BackgroundImage className="image" imageUrl={imageUrl} />
+      <BackgroundImage className='image' imageUrl={imageUrl} />
       <CollectionFooterContainer>
         <NameContainer>{name}</NameContainer>
         <PriceContainer>{price}</PriceContainer>

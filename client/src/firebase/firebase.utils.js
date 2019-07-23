@@ -1,15 +1,15 @@
-import firebase from "firebase/app";
-import "firebase/firestore";
-import "firebase/auth";
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
 
 const config = {
-  apiKey: "AIzaSyDIhhe2CQKszW5j_dtDkjrcTDLK7nD4Ccg",
-  authDomain: "crwn-db-425ca.firebaseapp.com",
-  databaseURL: "https://crwn-db-425ca.firebaseio.com",
-  projectId: "crwn-db-425ca",
-  storageBucket: "",
-  messagingSenderId: "418614953912",
-  appId: "1:418614953912:web:606036c5d26c75ef"
+  apiKey: 'AIzaSyCdHT-AYHXjF7wOrfAchX4PIm3cSj5tn14',
+  authDomain: 'crwn-db.firebaseapp.com',
+  databaseURL: 'https://crwn-db.firebaseio.com',
+  projectId: 'crwn-db',
+  storageBucket: 'crwn-db.appspot.com',
+  messagingSenderId: '850995411664',
+  appId: '1:850995411664:web:7ddc01d597846f65'
 };
 
 firebase.initializeApp(config);
@@ -32,7 +32,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         ...additionalData
       });
     } catch (error) {
-      console.log("error creating user", error.message);
+      console.log('error creating user', error.message);
     }
   }
 
@@ -66,9 +66,9 @@ export const convertCollectionsSnapshotToMap = collections => {
     };
   });
 
-  return transformedCollection.reduce((accumalator, collection) => {
-    accumalator[collection.title.toLowerCase()] = collection;
-    return accumalator;
+  return transformedCollection.reduce((accumulator, collection) => {
+    accumulator[collection.title.toLowerCase()] = collection;
+    return accumulator;
   }, {});
 };
 
@@ -85,7 +85,7 @@ export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
-googleProvider.setCustomParameters({ prompt: "select_account" });
+googleProvider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 
 export default firebase;
